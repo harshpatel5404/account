@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -26,6 +27,8 @@ class _MyHomeState extends State<MyHome> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: isSwitched?  HexColor("#240098"):Colors.grey[300]));
     return Scaffold(
         body: SafeArea(
       child: Container(
@@ -119,7 +122,7 @@ class _MyHomeState extends State<MyHome> {
                     radius: 25.0,
                     child: Icon(
                       Icons.person,
-                       color: isSwitched ? Colors.white : Colors.black,
+                      color: isSwitched ? Colors.white : Colors.black,
                       size: 25,
                     ),
                   ),
@@ -149,7 +152,7 @@ class _MyHomeState extends State<MyHome> {
                     width: 60,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                       color: isSwitched? Colors.indigo[400] :Colors.grey[200],
+                      color: isSwitched ? Colors.indigo[400] : Colors.grey[200],
                     ),
                     child: Icon(Icons.arrow_forward_ios,
                         color: isSwitched ? Colors.white : Colors.black),
@@ -165,7 +168,7 @@ class _MyHomeState extends State<MyHome> {
                     radius: 25.0,
                     child: Icon(
                       Icons.notifications,
-                       color: isSwitched ? Colors.white : Colors.black,
+                      color: isSwitched ? Colors.white : Colors.black,
                       size: 25,
                     ),
                   ),
@@ -180,13 +183,11 @@ class _MyHomeState extends State<MyHome> {
                     ),
                   ),
                   Container(
-                 
-
                     height: 60,
                     width: 60,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: isSwitched? Colors.indigo[400] :Colors.grey[200],
+                      color: isSwitched ? Colors.indigo[400] : Colors.grey[200],
                     ),
                     child: Icon(Icons.arrow_forward_ios,
                         color: isSwitched ? Colors.white : Colors.black),
@@ -197,12 +198,12 @@ class _MyHomeState extends State<MyHome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
-                    backgroundColor: isSwitched? Colors.indigo[400] :Colors.grey[200],
-
+                    backgroundColor:
+                        isSwitched ? Colors.indigo[400] : Colors.grey[200],
                     radius: 25.0,
                     child: Icon(
                       Icons.dark_mode,
-                       color: isSwitched ? Colors.white : Colors.black,
+                      color: isSwitched ? Colors.white : Colors.black,
                       size: 25,
                     ),
                   ),
@@ -219,7 +220,7 @@ class _MyHomeState extends State<MyHome> {
                               color: isSwitched ? Colors.white : Colors.black),
                         ),
                         Text(
-                          "On",
+                          isSwitched ? "On" : "off",
                           style: GoogleFonts.poppins(
                               fontSize: 15,
                               color: isSwitched ? Colors.white : Colors.black),
@@ -239,7 +240,7 @@ class _MyHomeState extends State<MyHome> {
                                 });
                               },
                               value: isSwitched,
-                              activeColor: Colors.blueAccent,
+                              activeColor: Colors.white,
                               activeTrackColor: Colors.blue,
                               inactiveThumbColor: Colors.black,
                               inactiveTrackColor: Colors.black38,
@@ -251,12 +252,12 @@ class _MyHomeState extends State<MyHome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
-                    backgroundColor: isSwitched? Colors.indigo[400] :Colors.grey[200],
-
+                    backgroundColor:
+                        isSwitched ? Colors.indigo[400] : Colors.grey[200],
                     radius: 25.0,
                     child: Icon(
                       Icons.network_wifi,
-                       color: isSwitched ? Colors.white : Colors.black,
+                      color: isSwitched ? Colors.white : Colors.black,
                       size: 25,
                     ),
                   ),
@@ -273,7 +274,7 @@ class _MyHomeState extends State<MyHome> {
                     width: 60,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                     color: isSwitched? Colors.indigo[400] :Colors.grey[200],
+                      color: isSwitched ? Colors.indigo[400] : Colors.grey[200],
                     ),
                     child: Icon(Icons.arrow_forward_ios,
                         color: isSwitched ? Colors.white : Colors.black),
